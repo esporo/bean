@@ -1,0 +1,8 @@
+body {
+  background: var(--background-body);
+  color: var(--color-text);
+  font-family: var(--main-font-family);
+  font-size: var(--base-font-size);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}

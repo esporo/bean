@@ -1,0 +1,18 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-branding">
+      <h2 class="site-title">{{ site.title }}</h2>
+      <p class="site-tagline">{{ site.tagline }}</p>
+    </div>
+    
+    <div class="site-description">
+      {{ site.description | markdownify }}
+    </div>
+    
+    {% if site.bean.copyright_notice -%}
+      <div class="site-copyright">
+        {{ site.bean.copyright_notice | markdownify }}
+      </div>
+    {%- endif %}
+  </div>
+</footer>

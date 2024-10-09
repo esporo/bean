@@ -1,0 +1,40 @@
+{%- capture site_branding -%}
+  <a href="{{ '/'| absolute_url }}">
+    {% if site.logo -%}
+      <img class="site-logo" src="{{- site.logo -}}" alt="{{ site.title }}" role="presentation" />
+      <span class="screen-reader-text">{{ site.title }}</span>
+    {%- else -%}
+      {{ site.title }}
+    {%- endif %}
+  </a>
+{%- endcapture -%}
+
+<header class="site-header">
+  <div class="container">
+    {% if page.title -%}
+      <span class="site-title">
+        {{ site_branding }}
+      </span>
+    {%- else -%}
+      <h1 class="site-title">
+        {{ site_branding }}
+      </h1>
+    {%- endif %}
+    
+    {% if site.main_menu -%}
+      <nav class="main-menu">
+        {% if site.main_menu.title -%}
+          <h2 class="screen-reader-text">
+            {{ site.main_menu.title }}
+          </h2>
+        {%- endif %}
+        
+        {% for item in site.main_menu.items -%}
+          <a class="menu-item" {% if item.color -%} style="--item-color: {{ item.color }}" {%- endif %} href="{{ item.path }}">
+            {{ item.label }}
+          </a>
+        {%- endfor %}
+      </nav>
+    {%- endif %}
+  </div>
+</header>

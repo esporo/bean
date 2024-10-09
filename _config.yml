@@ -1,0 +1,22 @@
+title: Bean
+tagline: A new theme for Esporo and Simulando.
+description: >-
+  Bean is a new, customizable Jekyll theme made for @esporo websites.
+
+bean:
+  copyright_notice: >-
+    Lorem ipsum dolor sit amet.
+
+main_menu:
+  title: Navigate
+  items:
+    - label: Home
+      path: /
+    - label: About
+      path: /about/
+    - label: Forum
+      path: https://forum.esporo.net
+    - label: Wiki
+      path: https://guia.esporo.net
+    - label: Downloads
+      path: /downloads/

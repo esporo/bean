@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "Atkinson Hyperlegible";
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+    src: url("/assets/fonts/atkinson-hyperlegible-400.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Atkinson Hyperlegible";
+    font-display: swap;
+    font-style: italic;
+    font-weight: 400;
+    src: url("/assets/fonts/atkinson-hyperlegible-400i.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Atkinson Hyperlegible";
+    font-display: swap;
+    font-style: normal;
+    font-weight: 700;
+    src: url("/assets/fonts/atkinson-hyperlegible-700.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Atkinson Hyperlegible";
+    font-display: swap;
+    font-style: italic;
+    font-weight: 700;
+    src: url("/assets/fonts/atkinson-hyperlegible-700i.woff2") format("woff2");
+}
