@@ -22,3 +22,13 @@ main_menu:
       path: https://guia.esporo.net
     - label: Downloads
       path: /downloads/
+
+footer_menu:
+  title: Socials
+  items:
+    - label: Discord
+      path: https://discord.gg/
+    - label: YouTube
+      path: https://youtube.com/
+    - label: Facebook
+      path: https://www.facebook.com/

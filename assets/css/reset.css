@@ -11,31 +11,31 @@
   --code-font-family: "IBM Plex Mono", Monaco, Consolas, "DejaVu Sans Mono", ui-monospace, monospace;
   
   /* Backgrounds */
-  --background-body: rgb(245, 245, 245);
-  --background-header: rgb(177, 205, 73);
-  --background-footer: rgb(224, 147, 47);
+  --background-body: rgb(255, 255, 255);
+  --background-header: rgb(1, 157, 224);
+  --background-footer: rgb(255, 241, 6);
   
   /* Colors */
-  --color-text: rgb(1, 1, 5);
-  --color-shadows: rgba(234, 238, 241, 0.75);
+  --color-text: rgb(1, 0, 0);
+  --color-shadows: rgba(1, 0, 0, 0.25);
   --color-details: rgb(149, 149, 153);
-  --color-accent: rgb(45, 158, 221);
-  --color-accent-alt: rgb(35, 97, 167);
+  --color-accent: rgb(1, 157, 224);
+  --color-accent-alt: rgb(255, 0, 24);
 }
 
 @media screen and (prefers-color-scheme: dark) {
   :root {
    /* Backgrounds */
    --background-body: rgb(0, 0, 13); 
-   --background-header: rgb(0, 70, 32);
-   --background-footer: rgb(164, 36, 51);
+   --background-header: rgb(216, 35, 42);
+   --background-footer: rgb(199, 214, 51);
    
    /* Colors */
-   --color-text: rgb(245, 245, 245);
-   --color-shadows: rgba(1, 1, 5, 0.5);
+   --color-text: rgb(255, 255, 255);
+   --color-shadows: rgba(255, 255, 255, 0.25);
    --color-details: rgb(234, 238, 241);
-   --color-accent: rgb(224, 147, 47);
-   --color-accent-alt: rgb(91, 48, 141);
+   --color-accent: rgb(255, 241, 6);
+   --color-accent-alt: rgb(235, 140, 45);
   }
 }
 

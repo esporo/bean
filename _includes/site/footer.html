@@ -1,18 +1,36 @@
 <footer class="site-footer">
   <div class="container">
-    <div class="site-branding">
-      <h2 class="site-title">{{ site.title }}</h2>
-      <p class="site-tagline">{{ site.tagline }}</p>
-    </div>
-    
-    <div class="site-description">
-      {{ site.description | markdownify }}
-    </div>
-    
-    {% if site.bean.copyright_notice -%}
-      <div class="site-copyright">
-        {{ site.bean.copyright_notice | markdownify }}
+    <div class="site-info">
+      <div class="site-branding">
+        <h2 class="site-title">{{ site.title }}</h2>
+        <p class="site-tagline">{{ site.tagline }}</p>
       </div>
+      
+      <div class="site-description">
+        {{ site.description | markdownify }}
+      </div>
+      
+      {% if site.bean.copyright_notice -%}
+        <div class="site-copyright">
+          {{ site.bean.copyright_notice | markdownify }}
+        </div>
+      {%- endif %}
+    </div>
+    
+    {% if site.footer_menu.items -%}
+      <nav class="footer-menu">
+        {% if site.footer_menu.title -%}
+          <h2 class="screen-reader-text">
+            {{ site.footer_menu.title }}
+          </h2>
+        {%- endif %}
+        
+        {% for item in site.footer_menu.items -%}
+          <a class="menu-item" {% if item.color -%} style="--item-color: {{ item.color }}" {%- endif %} href="{{ item.path }}">
+            {{ item.label }}
+          </a>
+        {%- endfor %}
+      </nav>
     {%- endif %}
   </div>
 </footer>
