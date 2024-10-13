@@ -6,6 +6,8 @@ description: >-
 bean:
   copyright_notice: >-
     Lorem ipsum dolor sit amet.
+    
+logo: /assets/images/logo.png
 
 main_menu:
   title: Navigate

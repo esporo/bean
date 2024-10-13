@@ -6,9 +6,9 @@
   --spacing-unit: var(--base-font-size);
   
   /* Typography */
-  --main-font-family: "Atkinson Hyperlegible", system-ui, sans-serif;
+  --main-font-family: "IBM Plex Sans", system-ui, sans-serif;
   --head-font-family: var(--main-font-family);
-  --code-font-family: Inconsolata, Monaco, Consolas, "DejaVu Sans Mono", ui-monospace, monospace;
+  --code-font-family: "IBM Plex Mono", Monaco, Consolas, "DejaVu Sans Mono", ui-monospace, monospace;
   
   /* Backgrounds */
   --background-body: rgb(245, 245, 245);
@@ -17,7 +17,7 @@
   
   /* Colors */
   --color-text: rgb(1, 1, 5);
-  --color-shadows: rgb(234, 238, 241, 0.5);
+  --color-shadows: rgba(234, 238, 241, 0.75);
   --color-details: rgb(149, 149, 153);
   --color-accent: rgb(45, 158, 221);
   --color-accent-alt: rgb(35, 97, 167);
@@ -26,15 +26,15 @@
 @media screen and (prefers-color-scheme: dark) {
   :root {
    /* Backgrounds */
-   --background-body: rgb(1, 1, 5); 
-   /* --background-header: rgb(0, 70, 32); */
-   /* --background-footer: rgb(164, 36, 51); */
+   --background-body: rgb(0, 0, 13); 
+   --background-header: rgb(0, 70, 32);
+   --background-footer: rgb(164, 36, 51);
    
    /* Colors */
    --color-text: rgb(245, 245, 245);
    --color-shadows: rgba(1, 1, 5, 0.5);
    --color-details: rgb(234, 238, 241);
-   --color-accent: rgb(202, 0, 136);
+   --color-accent: rgb(224, 147, 47);
    --color-accent-alt: rgb(91, 48, 141);
   }
 }
