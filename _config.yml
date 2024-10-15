@@ -1,7 +1,8 @@
 title: Bean
-tagline: A new theme for Esporo and Simulando.
+tagline: A modern, fun theme for Jekyll.
 description: >-
-  Bean is a new, customizable Jekyll theme made for @esporo websites.
+  Bean is a fun, colorful, theme for Jekyll.
+  It's made for @esporo, but you can use it as well.
 
 # Build settings
 permalink: "/:year/:month/:day/:title.html"
@@ -9,9 +10,9 @@ slug_mode: latin
 
 # Theme Settings
 bean:
-  # show_excerpts: true
+  show_excerpts: true
   copyright_notice: >-
-    Lorem ipsum dolor sit amet.
+    Site built using [Bean](https://github.com/esporo/bean)
   date_formats:
     day: "%v"
     month: "%B, %Y"
@@ -27,7 +28,7 @@ bean:
     blog_pagination_next_page: "Older posts"
     blog_pagination_prev_page: "Newer posts"
     
-logo: /assets/images/logo.png
+# logo: /assets/images/logo.png
 
 main_menu:
   title: Navigate
@@ -36,12 +37,10 @@ main_menu:
       path: /
     - label: About
       path: /about/
-    - label: Forum
-      path: https://forum.esporo.net
-    - label: Wiki
-      path: https://guia.esporo.net
-    - label: Downloads
-      path: /downloads/
+    - label: Bugs?
+      path: https://github.com/esporo/bean/issues
+    - label: Docs
+      path: hhttps://github.com/esporo/bean?tab=readme-ov-file#readme
 
 footer_menu:
   title: Socials

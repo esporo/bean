@@ -2,8 +2,8 @@
   url: https://arthr.me/
   description: The author of this theme.
 - title: Repository
-  url: https://pierre.co/esporo/bean
-  description: Theme repository and issue-tracker.
+  url: https://github.com/esporo/bean/
+  description: If you find any bugs, file them here.
 - title: RubyGems
-  url: https://rubygems.org/gem/jekyll-bean
-  description: The theme page on RubyGems registry.
+  url: https://rubygems.org/gem/bean/
+  description: Bean on RubyGems registry.

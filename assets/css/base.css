@@ -169,6 +169,18 @@ pre code {
   font-size: 0.9em;
 }
 
+/* Highlighted code */
+
+.highlight pre table,
+.highlight th,
+.highlight td,
+.highlight pre pre {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+
 /*
   Blockquotes
 */

@@ -44,11 +44,10 @@
   </header>
   
   {% if include.post.title and include.post.title != "" %}
-  
     {% unless hide_posts_content or page.hide_posts_content -%}
       <div class="post-content">
         
-        {% if include.show_excertps or page.show_excerpts or site.bean.show_excerpts %}
+        {% if page.layout != "post" and include.show_excerpts or page.show_excerpts or site.bean.show_excerpts %}
           {{ post.excerpt }}
         {% else %}
           {{ include.content }}

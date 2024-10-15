@@ -5,6 +5,8 @@ layout: default
 <div class="container">
   <div class="blog-posts">
       {%- include blog/post.html post=page content=content -%}
+      
+      {%- include below-post.html -%}
     
       {% if page.previous or page.next -%}
         <nav class="blog-pagination">
