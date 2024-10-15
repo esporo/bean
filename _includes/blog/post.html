@@ -1,0 +1,85 @@
+<article class="post">
+  <header class="post-header">
+    <div class="post-meta">
+      <a class="post-permalink" href="{{- include.post.permalink | absolute_path -}}" rel="bookmark">
+        <time class="post-date" datetime="{{- include.post.date | date_to_xmlschema -}}">
+          {{ include.post.date | date: site.bean.date_formats.day }}
+        </time>
+      </a>
+      
+      {% if include.post.author -%}
+        {%- assign author = include.post.author -%}
+        
+        {%- if site.data.authors -%}
+          {%- assign author = site.data.authors[include.post.author] -%}
+        {%- elsif site.authors -%}
+          {%- assign author = site.authors[include.post.author] -%}
+        {%- endif -%}
+      {%- elsif site.author -%}
+        {% assign author = site.author %}
+      {%- endif -%}
+      
+      {% if author -%}
+        <a class="post-author" rel="author" href="{{- author.url | default: site.url -}}">
+          {{ author.name | default: author }}
+        </a>
+      {%- endif %}
+    </div>
+    
+    {% if page.layout == "post" -%}
+      {% if include.post.title and include.post.title != "" %}
+        <h1 class="post-title">
+          {{ include.post.title }}
+        </h1>
+      {%- endif %}
+    {%- else -%}
+      {% if include.post.title and include.post.title != "" -%}
+        <h2 class="post-title">
+          <a href="{{- include.post.url | relative_path -}}" rel="bookmark">
+            {{ include.post.title }}
+          </a>
+        </h2>
+      {%- endif %}
+    {%- endif %}
+  </header>
+  
+  {% if include.post.title and include.post.title != "" %}
+  
+    {% unless hide_posts_content or page.hide_posts_content -%}
+      <div class="post-content">
+        
+        {% if include.show_excertps or page.show_excerpts or site.bean.show_excerpts %}
+          {{ post.excerpt }}
+        {% else %}
+          {{ include.content }}
+        {% endif %}
+        
+      </div>
+    {%- endunless %}
+    
+  {%- else -%}
+    <div class="post-content">
+      {{ include.content }}
+    </div>
+  {%- endif %}
+  
+  {% if include.post.tags -%}
+    <footer class="post-footer">
+      <span class="post-meta">
+        {{ site.bean.translations.post_tagged_with }}
+      </span>
+      
+      <ul class="post-meta post-tags">
+        {% for tag in include.post.tags -%}
+          {%- assign tag_url = site.jekyll-archives.permalinks.tag | replace: ":name", tag | replace: " ", "-" -%}
+          <li class="post-tag">
+            
+            <a href="{{- tag_url -}}" rel="tag">
+              {{ tag }}
+            </a>
+          </li>
+        {%- endfor %}
+      </ul>
+    </footer>
+  {%- endif %}
+</article>

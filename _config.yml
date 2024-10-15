@@ -3,9 +3,29 @@ tagline: A new theme for Esporo and Simulando.
 description: >-
   Bean is a new, customizable Jekyll theme made for @esporo websites.
 
+# Build settings
+permalink: "/:year/:month/:day/:title.html"
+slug_mode: latin
+
+# Theme Settings
 bean:
+  # show_excerpts: true
   copyright_notice: >-
     Lorem ipsum dolor sit amet.
+  date_formats:
+    day: "%v"
+    month: "%B, %Y"
+    year: "%Y"
+  translations:
+    jump_to_navigation: "Go to navigation"
+    jump_to_content: "Go to content"
+    archive_date_title: "Posts from %s" # don't forget `%s`, it will be replaced by the date
+    archive_tag_title: "Posts with the tag “%s”" # don't forget `%s`, it will be replaced by the tag name.
+    archive_category_title: "Posts filed under “%s”" # don't forget `%s`, it will be replaced by the category name.
+    post_tagged_with: "Tagged with:"
+    blog_pagination_title: "Blog Pagination"
+    blog_pagination_next_page: "Older posts"
+    blog_pagination_prev_page: "Newer posts"
     
 logo: /assets/images/logo.png
 
@@ -32,3 +52,28 @@ footer_menu:
       path: https://youtube.com/
     - label: Facebook
       path: https://www.facebook.com/
+
+# Plugin settings
+plugins:
+  - jekyll-feed
+  - jekyll-json-feed
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-archives
+
+# Plugin: jekyll-paginate
+paginate: 12
+paginate_path: "/page/:num/"
+
+# Plugin: jekyll-archives
+jekyll-archives:
+  enabled:
+  - year
+  - month
+  - tags
+  layout: blog
+  permalinks:
+    year: "/:year/"
+    month: "/:year/:month/"
+    tag: "/tags/:name.html"

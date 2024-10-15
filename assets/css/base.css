@@ -11,12 +11,45 @@ body {
   Text Elements
 */
 
+p, ul, ol, dl,
+pre, blockquote
+table, figure,
+video, audio, iframe {
+  margin-bottom: var(--spacing-unit);
+  max-width: 100%;
+  position: relative;
+}
+
+sub, sup {
+  font-size: 0.5em;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+sup {
+  vertical-align: text-top;
+}
+
+del, strike {
+  text-decoration-style: wavy;
+}
+
+ins {
+  background-color: color-mix(in srgb, var(--color-accent), var(--background-body) 60%);
+  text-decoration: none;
+}
+
 /* Links */
 a {
   color: var(--color-accent);
   text-decoration: underline;
-  text-decoration-thickness: 0.01em;
+  text-decoration-thickness: 0.05em;
   text-decoration-color: transparent;
+  transition-property: color, text-decoration-color;
+  transition-timing-function: ease;
+  transition-duration: 250ms;
 }
 
 a:hover,
@@ -26,4 +59,256 @@ a:focus {
 
 a:active {
   color: var(--color-accent-alt);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--head-font-family);
+  font-weight: normal;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-unit);
+}
+
+h1 {
+  font-size: clamp(2.6rem, 3vw, 3.2rem);
+}
+
+h2 {
+  font-size: clamp(2.2rem, 2.75vw, 2.8rem);
+}
+
+h3 {
+  font-size: clamp(2rem, 2.5vw, 2.6rem);
+}
+
+h4 {
+  font-size: clamp(1.8rem, 2.25vw, 2.4rem);
+}
+
+h5 {
+  font-size: clamp(1.6rem, 2vw, 2.2rem);
+}
+
+h6 {
+  font-size: clamp(1.4rem, 1.75vw, 1.8rem);
+}
+
+/* Lists */
+ul, ol, dl {
+  margin-left: 1.5em;
+}
+
+ul, ol {
+  list-style-position: outside;
+}
+
+ul ul,
+ol ol,
+dl dl {
+  margin-bottom: 0;
+}
+
+/* Unordered list */
+ul ul {
+  list-style-type: square;
+}
+
+ul ul ul {
+  list-style-type: circle;
+}
+
+/* Ordered list */
+ol ol {
+  list-style-type: lower-alpha;
+}
+
+ol ol ol {
+  list-style-type: lower-roman;
+}
+
+/* Definition list */
+dl dt {
+  font-size: var(--small-font-size);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+dl dd {
+  margin-left: 0;
+  margin-bottom: var(--spacing-unit);
+}
+
+/* Code and pre-formatted text */
+code, pre, var, kbd, tt {
+  font-family: var(--code-font-family);
+}
+
+pre {
+  background: color-mix(in srgb, var(--color-text), var(--background-body) 95%);
+  font-size: var(--small-font-size);
+  padding: calc(var(--spacing-unit) / 2);
+  overflow: auto;
+  border: 0.1rem solid var(--color-details);
+  border-radius: 0.5rem;
+  box-shadow: inset var(--shadow);
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  pre {
+    background: color-mix(in srgb, var(--background-body), var(--color-text) 15%);
+  }
+}
+
+pre code {
+  font-size: 100%;
+}
+
+:not(pre) > code {
+  background: color-mix(in srgb, var(--color-text), var(--background-body) 95%);
+  font-size: 0.9em;
+}
+
+/*
+  Blockquotes
+*/
+
+q {
+  quotes: "“" "”" "‘" "’";
+  font-style: normal;
+}
+
+blockquote {
+  position: relative;
+  border-left: var(--border);
+  box-shadow: inset 0.5rem 0 0.5rem -0.5rem var(--color-shadows);
+  padding-left: var(--spacing-unit);
+  font-size: 90%;
+}
+
+blockquote > * {
+  font-size: 1.25em;
+}
+
+cite {
+  font-size: var(--small-font-size);
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Media */
+img {
+  max-width: 100%;
+  overflow: hidden;
+  opacity: 1;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  img {
+    opacity: 0.75;
+    transition: opacity 250ms ease;
+  }
+  
+  img:hover,
+  img:focus {
+    opacity: 1;
+  }
+}
+
+.post-content img {
+  border: 0.1rem solid var(--color-details);
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+}
+
+@media screen and (min-width: 690px) {
+  .post-content img {
+    width: calc(100% - (var(--spacing-unit) / 2 + 15rem));
+  }
+}
+
+img + em,
+img + br + em {
+  display: block;
+  width: 15rem;
+  box-shadow: inset 0.5rem 0 0.5rem -0.5rem var(--color-shadows);
+  font-style: normal;
+  font-size: var(--small-font-size);
+  padding: calc(var(--spacing-unit) / 4) calc(var(--spacing-unit) / 2);
+}
+
+@media screen and (min-width: 690px) {
+  img + em,
+  img + br + em {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+video,
+iframe[src*="youtu"],
+iframe[src*="twitch"],
+iframe[src*="vimeo"] {
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  aspect-ratio: 16 / 9;
+  height: auto;
+  width: 100%;
+}
+
+/*
+  Tables
+*/
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-radius: 0.5rem;
+  border: 0.1rem solid var(--color-details);
+  box-shadow: var(--shadow);
+  margin: 1.5rem 0;
+}
+
+figure > table {
+  width: max-content;
+  margin: 0;
+}
+
+td,
+th {
+  border: 0.1rem solid var(--color-details);
+  text-align: start;
+  padding: 0.5rem;
+}
+
+th {
+  background-color: color-mix(in srgb, var(--background-body), var(--color-text) 50%);
+  color: var(--background-body);
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: color-mix(in srgb, var(--background-body), var(--color-text) 5%);
+}
+
+table caption {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/*
+  Horizontal Rule
+*/
+
+hr {
+  margin: calc(var(--spacing-unit) * 2) auto;
+  border-top: var(--border);
+  box-shadow: var(--shadow);
+  height: 0;
+  max-width: 25rem;
 }

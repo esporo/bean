@@ -8,9 +8,14 @@
     <title>{{ site.title }} &mdash; {{ site.tagline }}</title>
   {%- endif %}
   
+  {% seo title=false %}
+  
   <link rel="stylesheet" href="{%- link assets/css/reset.css -%}" />
   <link rel="stylesheet" href="{%- link assets/css/base.css -%}" />
   <link rel="stylesheet" href="{%- link assets/css/layout.css -%}" />
   <link rel="stylesheet" href="{%- link assets/css/theme.css -%}" />
   <link rel="stylesheet" href="{%- link assets/fonts/fonts.css -%}" />
+  
+  {% feed_meta %}
+  {% json_feed_meta %}
 </head>

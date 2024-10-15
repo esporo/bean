@@ -2,13 +2,15 @@
 <html lang="{{- page.lang | default: site.lang -}}">
   {% include head.html %}
   <body>
+    <a class="screen-reader-text" href="#content">{{ site.bean.translations.jump_to_content }}</a>
+    {% if site.main_menu -%}
+      <a class="screen-reader-text" href="#navigation">{{ site.bean.translations.jump_to_navigation }}</a>
+    {%- endif %}
     <div class="site">
       {% include site/header.html %}
       
-      <main class="site-content">
-        <div class="container">
-          {{ content }}
-        </div>
+      <main class="site-content" id="content">
+        {{ content }}
       </main>
       
       {% include site/footer.html %}

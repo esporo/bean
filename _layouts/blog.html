@@ -1,0 +1,59 @@
+---
+layout: default
+---
+
+{%- if page.posts -%}
+  {% comment %}
+    We are dealing with archives.
+  {% endcomment %}
+  
+  {%- assign posts = page.posts -%}
+  {%- assign hide_posts_content = true -%}
+{%- elsif paginator.posts -%}
+  {% comment %}  
+    We are dealing with the blog flow.
+  {% endcomment %}
+  {% assign posts = paginator.posts %}
+{%- else -%}
+  {% comment %}
+    Pagination is disabled, brings full archive.
+  {% endcomment %}
+  {%- assign posts = site.posts -%}
+{%- endif -%}
+
+
+<div class="container">
+  <div class="blog-posts">
+    {%- if page.date or page.type -%}
+      {%- include blog/archive-title.html type=page.type date=page.date title=page.title hide_posts_content=hide_posts_content -%}
+    {%- endif -%}
+    
+    {% for post in posts %}
+      {%- include blog/post.html post=post content=post.content -%}
+    {% endfor %}
+    
+    {% if paginator.previous_page or paginator.next_page -%}
+      <nav class="blog-pagination">
+        <h2 class="screen-reader-text">
+          {{- site.bean.translations.blog_pagination_text -}}
+        </h2>
+        
+        <div class="pagination-links">
+          {% if paginator.previous_page -%}
+            <a class="prev-page menu-item" href="{{ paginator.previous_page_path | relative_url }}" rel="prev">
+              {{- site.bean.translations.blog_pagination_prev_page -}}
+            </a>
+          {%- endif %}
+          
+          {% if paginator.next_page -%}
+            <a class="next-page menu-item" href="{{ paginator.next_page_path | relative_url }}" rel="next">
+              {{- site.bean.translations.blog_pagination_next_page -}}
+            </a>
+          {%- endif %}
+        </div>
+      </nav>
+    {%- endif %}
+  </div>
+    
+  {% include blog/sidebar.html %}
+</div>

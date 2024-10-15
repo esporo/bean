@@ -1,0 +1,12 @@
+<h1 class="archive-title">
+  {%- if include.date -%}
+    {%- assign archive_date = include.date | date: site.bean.date_formats[include.type] -%}
+    {{ site.bean.translations.archive_date_title | replace: "%s", archive_date }}
+  {% else %}
+    {%- if include.type == "tag" -%}
+      {{ site.bean.translations.archive_tag_title | replace: "%s", include.title }}
+    {%- else -%}
+      {{ site.bean.translations.archive_category_title | replace: "%s", include.title }}
+    {%- endif -%}
+  {% endif %}
+</h1>

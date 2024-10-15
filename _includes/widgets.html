@@ -1,0 +1,33 @@
+{% comment %}
+  Sidebar widgets
+  
+  You can add custom widgets to the sidebar of your site by sending 
+  both title and contents of your widget through an include. For example:
+  
+  {% capture widget_content %}
+    <p>This will appear in my sidebar!</p>
+  {% endcapture %}
+  
+  {% assign widget_title = "This is an example" %}
+  
+  {% include blog/widget.html title=widget_title content=widget_content %}
+{% endcomment %}
+
+{% assign blogroll_title = "Useful links" %}
+
+{% capture blogroll_content %}
+  <dl class="blogroll">
+    {%- for item in site.data.blogroll -%}
+      <dt>
+        <a href="{{ item.url }}" rel="external">
+          {{ item.title }}
+        </a>
+      </dt>
+      <dd>
+        {{ item.description }}
+      </dd>
+    {%- endfor -%}
+  </dl>
+{% endcapture %}
+
+{%- include blog/widget.html title=blogroll_title content=blogroll_content -%}
