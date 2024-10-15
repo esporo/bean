@@ -218,35 +218,35 @@ Bean tries to bring up post author information from the following sources:
 
 1. An `author` object in the front-matter of your post:
   ```yaml
-author:
-  name: Will Wright
-  url: https://example.com
+  author:
+    name: Will Wright
+    url: https://example.com
   ```
 2. Your `_data/authors.yml`.
   It may look like this:
   
   ```yaml
-will:
-  name: Will Wright
-  url: https://example.com
+  will:
+    name: Will Wright
+    url: https://example.com
   ```
 3. A `site.authors` or `site.author` object in your `_config.yml`.
   Something like this will do:
   
   ```yaml
-authors:
-  will:
+  authors:
+    will:
+      name: Will Wright
+      url: https://example.com
+      lucy:
+      name: Lucy Bradshaw
+      url: https://example.net
+
+  # or
+
+  author:
     name: Will Wright
-    url: https://example.com
-  lucy:
-    name: Lucy Bradshaw
-    url: https://example.net
-
-# or
-
-author:
-  name: Will Wright
-  url: "https://willwright.blog"
+    url: "https://willwright.blog"
   ```
 
 If none of these sources are available, Bean will just show the value of your `post.author` as it is.
@@ -255,7 +255,9 @@ If none of these sources are available, Bean will just show the value of your `p
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/esporo/bean. Be aware that, as this theme is intended to be used by my own fansite, not every suggestion may be applied. You are free to fork it and change it to fit your needs!
+Bug reports and pull requests are welcome on GitHub at https://github.com/esporo/bean.
+
+Be aware that, as this theme is intended to be used by my own fansite, not every suggestion may be applied. You are free to fork it and change it to fit your needs!
 
 ## License
 
