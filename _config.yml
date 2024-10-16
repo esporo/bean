@@ -7,6 +7,8 @@ description: >-
 # Build settings
 permalink: "/:year/:month/:day/:title.html"
 slug_mode: latin
+url: "https://esporo.github.io/"
+baseurl: "/bean"
 
 # Theme Settings
 bean:
