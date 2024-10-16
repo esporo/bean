@@ -245,7 +245,8 @@
   }
 }
 
-.blog-posts {
+.blog-posts,
+.page {
   grid-area: content;
 }
 
