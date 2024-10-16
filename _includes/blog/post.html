@@ -70,9 +70,9 @@
       
       <ul class="post-meta post-tags">
         {% for tag in include.post.tags -%}
-          {%- assign tag_url = site.jekyll-archives.permalinks.tag | replace: ":name", tag | replace: " ", "-" -%}
+          {%- assign tag_name = tag | slugify: site.slug_mode -%}
+          {%- assign tag_url = site.jekyll-archives.permalinks.tag | replace: ":name", tag_name -%}
           <li class="post-tag">
-            
             <a href="{{- tag_url -}}" rel="tag">
               {{ tag }}
             </a>
