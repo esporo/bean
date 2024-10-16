@@ -62,7 +62,7 @@
     </div>
   {%- endif %}
   
-  {% if include.post.tags -%}
+  {% if include.post.tags and include.post.tags.size > 0 -%}
     <footer class="post-footer">
       <span class="post-meta">
         {{ site.bean.translations.post_tagged_with }}
