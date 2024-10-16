@@ -130,6 +130,7 @@
   border-radius: 2.5em;
   color: var(--background-body);
   display: inline-block;
+  flex: 0 0 auto;
   font-size: var(--small-font-size);
   font-weight: 700;
   line-height: 1;
@@ -219,7 +220,7 @@
   position: relative;
   z-index: 2;
   background: var(--background-body);
-  box-shadow: 0 0 0 1rem var(--color-shadows);
+  box-shadow: 0 0 1rem var(--color-shadows);
   min-height: 100px;
 }
 
