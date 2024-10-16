@@ -132,6 +132,8 @@ Bean adds support for pagination, archives, feeds and SEO tags, so you can confi
 * [jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md)
 * [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap)
 
+Please refer to the full [`_config.yml`](https://github.com/esporo/bean/blob/main/_config.yml) for plugin configurations.
+
 #### Style Options
 
 You can add a `theme.css` in your `/assets/css` directory to customize the style options of your site.
@@ -250,8 +252,6 @@ Bean tries to bring up post author information from the following sources:
   ```
 
 If none of these sources are available, Bean will just show the value of your `post.author` as it is.
-
-
 
 ## Contributing
 
