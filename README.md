@@ -1,5 +1,7 @@
 # Bean
 
+[![Gem Version](https://badge.fury.io/rb/jekyll-theme-bean@2x.png)](https://badge.fury.io/rb/jekyll-theme-bean)
+
 Bean, named after [the best Spore creature](https://spore.fandom.com/wiki/Bean) out there, is a Jekyll theme made to use in both [Esporo](https://esporo.net) and [Simulando](https://simulando.net) fansites. It can be used freely by anyone.
 
 Bean is colorful and customizable. You can change how it looks using CSS variables, you can add widgets to the sidebar or scripts easily.
