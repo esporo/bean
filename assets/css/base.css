@@ -283,7 +283,9 @@ table {
   border-radius: 0.5rem;
   border: 0.1rem solid var(--color-details);
   box-shadow: var(--shadow);
+  font-size: var(--small-font-size);
   margin: 1.5rem 0;
+  overflow: hidden;
 }
 
 figure > table {
@@ -293,7 +295,7 @@ figure > table {
 
 td,
 th {
-  border: 0.1rem solid var(--color-details);
+  border: none;
   text-align: start;
   padding: 0.5rem;
 }
