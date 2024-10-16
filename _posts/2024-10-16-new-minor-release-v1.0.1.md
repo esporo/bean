@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "v1.0.1 & v1.0.2"
+title: "v1.0.1, v1.0.2 & v1.0.3"
 author: arthur
 tags:
   - changelog
@@ -23,3 +23,10 @@ These are small updates to fix some styling issues.
 ### Fixes 🐞
 
 * Prevents the `page` layout from shrinking if it has a brief page content.
+
+
+## v1.0.3
+
+### New ✨
+
+* Moves IBM Plex `@font-face` declarations to another place, preventing it from being replaced if you add custom fonts.
