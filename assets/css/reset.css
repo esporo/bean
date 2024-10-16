@@ -3,7 +3,7 @@
   /* Sizing */
   --base-font-size: clamp(1.6rem, 2vw, 1.9rem);
   --small-font-size: clamp(1.2rem, 1.5vw, 1.4rem);
-  --spacing-unit: var(--base-font-size);
+  --spacing-unit: clamp(2rem, 2.5vw, 2.5rem);
   
   /* Typography */
   --main-font-family: "IBM Plex Sans", system-ui, sans-serif;
