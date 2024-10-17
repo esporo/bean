@@ -30,7 +30,7 @@
         {%- endif %}
         
         {% for item in site.main_menu.items -%}
-          <a class="menu-item" {% if item.color -%} style="--item-color: {{ item.color }}" {%- endif %} href="{{ item.path }}">
+          <a class="menu-item" {% if item.color -%} style="--item-color: {{ item.color }}" {%- endif %} href="{{ item.path | relative_url }}">
             {{ item.label }}
           </a>
         {%- endfor %}
