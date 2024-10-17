@@ -7,7 +7,7 @@
     font-display: swap;
     font-style: normal;
     font-weight: 400;
-    src: url("/assets/fonts/plex-sans-400.woff2") format("woff2");
+    src: url("../fonts/plex-sans-400.woff2") format("woff2");
 }
 
 @font-face {
@@ -15,7 +15,7 @@
     font-display: swap;
     font-style: italic;
     font-weight: 400;
-    src: url("/assets/fonts/plex-sans-400i.woff2") format("woff2");
+    src: url("../fonts/plex-sans-400i.woff2") format("woff2");
 }
 
 @font-face {
@@ -23,7 +23,7 @@
     font-display: swap;
     font-style: normal;
     font-weight: 700;
-    src: url("/assets/fonts/plex-sans-700.woff2") format("woff2");
+    src: url("../fonts/plex-sans-700.woff2") format("woff2");
 }
 
 @font-face {
@@ -31,7 +31,7 @@
     font-display: swap;
     font-style: italic;
     font-weight: 700;
-    src: url("/assets/fonts/plex-sans-700i.woff2") format("woff2");
+    src: url("../fonts/plex-sans-700i.woff2") format("woff2");
 }
 
 /*
@@ -43,7 +43,7 @@
     font-display: swap;
     font-style: normal;
     font-weight: 400;
-    src: url("/assets/fonts/plex-mono-400.woff2") format("woff2");
+    src: url("../fonts/plex-mono-400.woff2") format("woff2");
 }
 
 @font-face {
@@ -51,7 +51,7 @@
     font-display: swap;
     font-style: italic;
     font-weight: 400;
-    src: url("/assets/fonts/plex-mono-400i.woff2") format("woff2");
+    src: url("../fonts/plex-mono-400i.woff2") format("woff2");
 }
 
 @font-face {
@@ -59,7 +59,7 @@
     font-display: swap;
     font-style: normal;
     font-weight: 700;
-    src: url("/assets/fonts/plex-mono-700.woff2") format("woff2");
+    src: url("../fonts/plex-mono-700.woff2") format("woff2");
 }
 
 @font-face {
@@ -67,5 +67,5 @@
     font-display: swap;
     font-style: italic;
     font-weight: 700;
-    src: url("/assets/fonts/plex-mono-700i.woff2") format("woff2");
+    src: url("../fonts/plex-mono-700i.woff2") format("woff2");
 }
