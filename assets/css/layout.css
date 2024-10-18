@@ -330,6 +330,11 @@
   margin-bottom: calc(var(--spacing-unit) / 2);
 }
 
+.post-header .post-meta a:hover,
+.post-header .post-meta a:focus {
+  text-decoration-color: currentcolor;
+}
+
 .post .post-title {
   font-weight: normal;
   margin-bottom: 0;
@@ -367,8 +372,12 @@
   color: var(--color-details);
 }
 
-.post .post-meta a {
+.post-meta a {
   color: currentcolor;
+  text-decoration-thickness: 0.1em;
+}
+
+.post-footer .post-meta a {
   text-decoration: underline;
 }
 

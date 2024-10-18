@@ -37,7 +37,7 @@
    
    /* Colors */
    --color-text: rgb(255, 255, 255);
-   --color-shadows: rgba(255, 255, 255, 0.25);
+   --color-shadows: rgb(0, 0, 0);
    --color-details: rgb(234, 238, 241);
    --color-accent: rgb(255, 241, 6);
    --color-accent-alt: rgb(235, 140, 45);
